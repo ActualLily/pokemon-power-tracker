@@ -1,0 +1,161 @@
+﻿<Window x:Class="PPT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPT"
+        mc:Ignorable="d"
+        Title="Pokemon Power Tracker" Height="220" Width="504.667" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize" AutomationProperties.Name="Pokemon Power Tracker" Icon="img/machobrace.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid x:Name="MainGrid" Margin="0,0,0,1" Width="497" Height="188">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="HP" HorizontalAlignment="Left" Margin="28,-3,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="81" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_HP" HorizontalAlignment="Left" Height="16" Margin="112,9,0,0" VerticalAlignment="Top" Width="252" Foreground="#FF7CC16E" BorderBrush="#FF386C3E" SmallChange="0.396825396825397"/>
+        <Label Content="Attack" HorizontalAlignment="Left" Margin="-38,22,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_ATK" HorizontalAlignment="Left" Height="16" Margin="112,35,0,0" VerticalAlignment="Top" Width="252" Foreground="#FFE46D6D" BorderBrush="#FF884243"/>
+        <Label Content="Defense" HorizontalAlignment="Left" Margin="-38,48,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_DEF" HorizontalAlignment="Left" Height="16" Margin="112,61,0,0" VerticalAlignment="Top" Width="252" Foreground="#FFE6B263" BorderBrush="#FF7A4C22"/>
+        <Label Content="Sp. Atk." HorizontalAlignment="Left" Margin="-38,74,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_SPA" HorizontalAlignment="Left" Height="16" Margin="112,87,0,0" VerticalAlignment="Top" Width="252" Foreground="#FFC95B9E" BorderBrush="#FF8C437F"/>
+        <Label Content="Sp. Def." HorizontalAlignment="Left" Margin="-38,100,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_SPD" HorizontalAlignment="Left" Height="16" Margin="112,113,0,0" VerticalAlignment="Top" Width="252" Foreground="#FFE3D862" BorderBrush="#FF706628"/>
+        <Label Content="Speed" HorizontalAlignment="Left" Margin="-38,126,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <ProgressBar x:Name="Bar_SPE" HorizontalAlignment="Left" Height="16" Margin="112,139,0,0" VerticalAlignment="Top" Width="252" Foreground="#FF58C3E0" BorderBrush="#FF325D9D"/>
+        <Button x:Name="Btn_HP" Content="" HorizontalAlignment="Left" Margin="373,3,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_HP_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/powerweight.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_ATK" Content="" HorizontalAlignment="Left" Margin="373,29,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_ATK_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/powerbracer.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_DEF" Content="" HorizontalAlignment="Left" Margin="373,55,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_DEF_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/powerbelt.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_SPA" Content="" HorizontalAlignment="Left" Margin="373,81,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_SPA_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/powerlens.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_SPD" Content="" HorizontalAlignment="Left" Margin="373,107,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_SPD_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/powerband.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_SPE" Content="" HorizontalAlignment="Left" Margin="373,133,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="BTN_SPE_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/poweranklet.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_MCB" Content="" HorizontalAlignment="Left" Margin="373,159,0,0" VerticalAlignment="Top" Width="27" Height="27" Click="Btn_MCB_Click" Style="{DynamicResource CustomButtonStyle}" Opacity="0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="img/machobrace.png" Stretch="Uniform">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.1" ScaleY="1.1"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Lbl_SPE" Content="0" Margin="111,134,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" Width="253"/>
+        <Label x:Name="Lbl_SPD" Content="0" Margin="111,108,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" RenderTransformOrigin="0.471,-0.577" Width="253"/>
+        <Label x:Name="Lbl_SPA" Content="0" Margin="111,82,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" RenderTransformOrigin="0.471,-0.577" Width="253"/>
+        <Label x:Name="Lbl_DEF" Content="0" Margin="111,56,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" RenderTransformOrigin="0.471,-0.577" Width="253"/>
+        <Label x:Name="Lbl_ATK" Content="0" Margin="111,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" RenderTransformOrigin="0.471,-0.577" Width="253"/>
+        <Label x:Name="Lbl_HP" Content="0" Margin="111,4,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" RenderTransformOrigin="0.471,-0.577" Width="253"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,7,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click" Background="#FFA6D4A4" BorderBrush="#FF34653B"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,7,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_1" Background="#FFA6D4A4" BorderBrush="#FF34653B"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,7,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_2" Background="#FFA6D4A4" BorderBrush="#FF34653B"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,33,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_3" BorderBrush="#FF643637" Background="#FFF09293"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,33,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_4" BorderBrush="#FF643637" Background="#FFF09293"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,33,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_5" BorderBrush="#FF643637" Background="#FFF09293"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,59,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_6" Background="#FFF3D397" BorderBrush="#FF9D6A30"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,59,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_7" Background="#FFF3D397" BorderBrush="#FF9D6A30"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,59,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_8" Background="#FFF3D397" BorderBrush="#FF9D6A30"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,85,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_9" BorderBrush="#FF8C437F" Background="#FFD9ABCF"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,85,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_10" BorderBrush="#FF8C437F" Background="#FFD9ABCF"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,85,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_11" BorderBrush="#FF8C437F" Background="#FFD9ABCF"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,111,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_12" Background="#FFECF1AF" BorderBrush="#FF807628"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,111,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_13" Background="#FFECF1AF" BorderBrush="#FF807628"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,111,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_14" Background="#FFECF1AF" BorderBrush="#FF807628"/>
+        <Button Content="+1" HorizontalAlignment="Left" Margin="408,137,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_15" Background="#FF91D2DC" BorderBrush="#FF59629E"/>
+        <Button Content="+2" HorizontalAlignment="Left" Margin="437,137,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_16" Background="#FF91D2DC" BorderBrush="#FF59629E"/>
+        <Button Content="+3" HorizontalAlignment="Left" Margin="466,137,0,0" VerticalAlignment="Top" Width="24" Click="Button_Click_17" Background="#FF91D2DC" BorderBrush="#FF59629E"/>
+        <ProgressBar x:Name="Bar_SUM" HorizontalAlignment="Left" Height="16" Margin="112,165,0,0" VerticalAlignment="Top" Width="252" Foreground="Gray" BorderBrush="#FF595959" Value="100"/>
+        <Label x:Name="Lbl_SUM" Content="510" Margin="111,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Century Gothic" FontSize="13" Width="253" FontWeight="Bold"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="-39,152,0,-3" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic" Width="147" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="408,163,0,0" VerticalAlignment="Top" Width="82" Background="#FFD4D4D4" Click="Button_Click_18" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+
+    </Grid>
+</Window>
